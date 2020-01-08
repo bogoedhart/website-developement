@@ -10,11 +10,16 @@
 
 }
 
+@import {
+    font-family: 'Montserrat', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+}
+
 html, body {
     width: 100%;
     height: 100%;
     min-width: 600px;
-    background-color: #EEEEEE;  
+    background-color: white;  
     color: #303030;
     font-family: helvetica;
     padding: 0px 0px 0px 0px;
@@ -32,6 +37,7 @@ main {
 footer {
     background-color: rgb(219, 185, 178);
     padding: 15px;
+    margin-top: 60px;
 }
 
 
@@ -45,6 +51,9 @@ header h1 {
     color: black;
 }
 
+header{
+   font-family: 'Montserrat', sans-serif;
+}
 
 .nav-title {
     position: absolute;
@@ -53,9 +62,11 @@ header h1 {
     align: "" 
 }
 
+hr{
+    border: 1px solid rgb(51, 50, 50);
+}
 
-
-a:hover{
+h1 a:hover{
     color: rosybrown; 
 }
 
@@ -82,6 +93,7 @@ header nav ul li a:hover {
 
     text-decoration: underline;
     background-color: none;
+    color: black;
 }
 
 /*header nav ul li a {
@@ -107,9 +119,6 @@ div nav ul {
     color: black;
 }
 
- nav li a.active {
-    background-color: rgb(204, 168, 122);
-}
 
 a article {
     text-decoration: none;
@@ -223,11 +232,35 @@ img.shopItemDetail{
     margin: auto;
     text-align: center;
     margin-bottom: 50px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
+.SideNav{
+    background-color: rgb(169, 169, 169);
+    height: 600px;
+    width: 400px;
+    float: right;
+    margin-top: 180px;
+}
+#SizeIndex{
+    margin-top: 100px;
+    margin-left: 60px;
+}
 
+#SizeOptions{
+    list-style-type: none;
+    margin: 20px;
+}
 
+.SizeGuideBtn{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(51, 50, 50);
+}
+
+.SizeGuideBtn:hover{
+    color: rgb(121, 120, 120);
+}
 /*drop*/
 .dropdown {
   position: relative;
@@ -262,3 +295,37 @@ text-decoration: none;
 .dropdown:hover .dropdown-content {display: block;}
 /*drop*/
 
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}

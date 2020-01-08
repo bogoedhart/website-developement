@@ -4,34 +4,141 @@
 
     <head>
         <link rel="stylesheet" href="style.css">
-        <title>title</title>
+        <title>Minimalist</title>
     </head>
     
     <body>
         <main>
-        
+
             <header>
-                <nav>
-                    <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="product.html">products</a></li>
-                    <li><a class="active" href="businessInfo.html">business info</a></li>
-                    </ul>
-                </nav>
-                
-                <h1 id="hoofdtitel" class="belangrijk"><a href="index.html">Minimalist.</a></h1>
-            </header>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+            <div >
+                    <nav>
+                        <ul>
+                        <li><a href="index.html">home</a></li>
 
+                        <div class="dropdown">
+                        <li class="dropbtn">
+                        <a href="product.html">products</a>
+                        <div class="dropdown-content nu">
+                        <a href="ProductType1.html">ProductType1</a>
+                        <a href="ProductType2.html">ProductType2</a>
+                        <a href="ProductType3.html">ProductType3</a>
+                        </div>
+                        </li>
+                        </div>
 
-            <div>
-            <nav>
-                <ul>
-                    <li><a class="active" href="index.html">shoes</a></li>
-                    <li><a href="overmij.html">makeup</a></li>
-                    <li><a href="info.html">bags</a></li>
-                </ul>
-            </nav>
+                        <div class="dropdown">
+                        <li class="dropbtn">
+                        <a class="activeNav" href="businessInfo.html">business info</a>
+                        <div class="dropdown-content">
+                        <a href="InfoSheet1.html">InfoSheet1</a>
+                        <a href="InfoSheet2.html">InfoSheet2</a>
+                        <a href="InfoSheet3.html">InfoSheet3</a>
+                        </div>
+                        </li>
+                        </div>
+                        </ul>
+                    </nav>
+                    <!-- navagation done-->
+
+                    <h1><a href="index.html">Minimalist.</a><br>
+                    <span class="smalltext">Verzendkosten</span></h1>
             </div>
+            </header>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Country</th>
+    <th style="width:40%;">Price</th>
+  </tr>
+  <tr>
+    <td>Nederland</td>
+    <td>&euro;6,75</td>
+  </tr>
+  <tr>
+    <td>Belgie</td>
+    <td>&euro;13,00</td>
+  </tr>
+  <tr>
+    <td>Duitsland</td>
+    <td>&euro;13,00</td>
+  </tr>
+  <tr>
+    <td>Luxemburg</td>
+    <td>&euro;7,50</td>
+  </tr>
+  <tr>
+    <td>Amerikaanse Maagdeneilanden</td>
+    <td>&euro;10,00</td>
+  </tr>
+  <tr>
+    <td>Canada</td>
+    <td>&euro;10,00</td>
+  </tr>
+  <tr>
+    <td>Britse Maagdeneilanden</td>
+    <td>&euro;10,00</td>
+  </tr>
+  <tr>
+    <td>Frankrijk</td>
+    <td>&euro;7,50</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+
+
+            <footer>
+                <ul id="footerList">
+                    <li>la</li>
+                    <li>la</li>
+                    <li>la</li>
+                    <li>la</li>
+                </ul>
+                <ul id="footerList">
+                    <li>laa</li>
+                    <li>laa</li>
+                    <li>laa</li>
+                    <li>laa</li>
+                </ul>
+                <ul id="footerList">
+                    <li>laa</li>
+                    <li>laa</li>
+                    <li>laa</li>
+                    <li>laa</li>
+                </ul>
+             <div>
+                <p id="endnote">b.f.goedhart@icloud.com</p>
+                <p  id="endnote" class="smalltext">copyright B.F. Goedhart 2019</p>
+             </div>
+            </footer>
+            
+        
         </main>
+    
     </body>
+
 </html>
