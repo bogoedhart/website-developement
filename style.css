@@ -1,89 +1,264 @@
 /* Basislayout */
 
+
+@font-face {
+    font-family: 'lemonmilklight_italic';
+    src: url('lemonmilklightitalic-webfont.woff2') format('woff2'),
+         url('lemonmilklightitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html, body {
+    width: 100%;
     height: 100%;
-    padding: 0;
+    min-width: 600px;
     background-color: #EEEEEE;  
-    
     color: #303030;
-    font: Verdana, Arial, Sans-Serif;
+    font-family: helvetica;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 
 main {
     margin: 0 auto;
-    width: 700px;
+    width: 100%;
     position: relative;
 }
 
 
-article {
-    text-align: justify;
-}
-
-
-header {
-    color: skyblue;
-    text-align: center;
-}
-
-
 footer {
+    background-color: rgb(219, 185, 178);
+    padding: 15px;
+}
+
+
+/* 2e basis */
+
+header h1 {
     text-align: center;
-    padding-bottom: 10px;
+    padding: 0px 40px 0px 40px;
+    font-size: 4em;
+    font-family: lemonmilklight_italic;
+    color: black;
 }
 
 
-/* specifieke stijlen */
+.nav-title {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    align: "" 
+}
 
-img.zweefLinks {
+
+
+a:hover{
+    color: rosybrown; 
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* navigatiebalk */
+
+header nav ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0px 0px 0px 50px;
+    
+}
+header nav ul li {
     float: left;
-    margin-right: 15px;
+    padding: 20px;
+    font-size: 30px;
+    
 }
+header nav ul li a:hover {
+
+    text-decoration: underline;
+    background-color: none;
+}
+
+/*header nav ul li a {
+    display: block;
+    height: 20px;}*/
+
+div nav ul {
+    margin: auto;
+    padding: 0;
+}
+
+
+ div nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+ div nav li a:hover {
+    color: black;
+}
+
+ nav li a.active {
+    background-color: rgb(204, 168, 122);
+}
+
+a article {
+    text-decoration: none;
+}
+.AbsoluteBox{
+    max-height: 25%;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.flex-container a {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.WhiteTitle{
+    color: white;
+}
+.black{
+    color: black;
+}
+
+.BottomPic{
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+}
+
+/* id's 
+#footerList2 {
+    padding-left: 40px;
+    margin: 0px;
+    position: absolute;
+ 
+}
+#footerList3 {
+    padding-right: 40px;
+    padding-top: px;
+    margin: 0px;
+    position: absolute;
+}
+ */
+
+#footerList {
+    float: left;
+}
+
+#endnote {
+    clear: both;
+    text-align: center;
+}
+
+
+/* classes */
 
 .smalltext {
     font-size: 0.7em;
 }
 
-a {
-    color: skyblue;
-    text-decoration: none;
+.detail{
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.item {
+    text-align: center;
 }
 
-a:hover {
+img.shopItem {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.itemDescription{
+    /*text-align: center;*/
+    font-weight: 4em;
+    padding: 30px;
+    display: inline-block;
+}
+.price{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+img.shopItemDetail{
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+}
+.itemDescriptionDetail{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.activeNav{
     text-decoration: underline;
 }
-
-
-/* navigatiebalk */
-nav ul {
-    list-style-type: none;
+.itemFloat{
+    margin: 10px;
+}
+.flexImg{
+    display: flex;
+    flex-direction: row;
+}
+.outlineArticle{
+    width: 800px;
     margin: auto;
-    padding: 0;
-    background-color: #dddddd;
-    overflow: hidden;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav li a {
-    display: block;
-    color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav li a:hover {
-    background-color: #aaaaaa;
-}
-
-nav li a.active {
-    background-color: skyblue;
+    margin-bottom: 50px;
+    font-size: 50px;
 }
 
 
 
+/*drop*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #EEEEEE;
+  min-width: 160px;
+  opacity: 0.5;
+
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  text-align: left;
+}
+
+.dropdown-content a:hover{
+background-color: #ddd;
+text-decoration: none;
+} 
+
+
+
+.dropdown:hover .dropdown-content {display: block;}
+/*drop*/
 
